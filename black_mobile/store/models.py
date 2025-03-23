@@ -33,6 +33,19 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.ImageField(upload_to='products/', blank=True, null=True)
     description = models.TextField()
+    colour = models.CharField(max_length=100)
+    storage = models.CharField(max_length=100)
+    ram = models.CharField(max_length=100)
+    battery = models.CharField(max_length=100)
+    camera = models.CharField(max_length=100)
+    processor = models.CharField(max_length=100)
+    display = models.CharField(max_length=100)
+    sim = models.CharField(max_length=100)
+    os = models.CharField(max_length=100)
+    features = models.TextField()
+    date_created = models.DateTimeField(auto_now_add=True)
+    stock = models.IntegerField(default=0)
+
 
     def __str__(self):
         return self.name
