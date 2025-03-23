@@ -24,8 +24,7 @@ class CustomUserAdmin(UserAdmin):
                            'is_active',
                            'is_staff',
                            'is_superuser',
-                           'date_joined',
-                           'updated_at')}),
+                           )}),
     )
     list_display = ['username', 'email', 'phone', 'is_active', 'is_staff', 'is_superuser']
     search_fields = ['username', 'email', 'phone']
